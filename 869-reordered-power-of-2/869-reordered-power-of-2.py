@@ -2,7 +2,7 @@ class Solution:
     def reorderedPowerOf2(self, n: int) -> bool:
         if n == 1 or n == 2:
             return True
-        if n == 0 or n >=1000000000:
+        if n == 0 or (math.ceil(math.log10(n)/math.log10(10)) == math.floor(math.log10(n)/math.log10(10))) or n >=1000000000:
             return False
         
         
