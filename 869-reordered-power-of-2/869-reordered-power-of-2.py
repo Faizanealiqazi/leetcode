@@ -15,7 +15,7 @@ class Solution:
             return False
         flag = True
         length = len(str(n))
-        combinations = permutations(li,length)
+        combinations = permutations(li)
         
         for i in combinations:    
             num = ''
