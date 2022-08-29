@@ -13,8 +13,6 @@ class Solution:
             
         if count == 0:
             return False
-        flag = True
-        length = len(str(n))
         combinations = permutations(li)
         
         for i in combinations:    
@@ -27,7 +25,4 @@ class Solution:
                 if (num%2) == 0:
                     if (math.ceil(math.log10(num)/math.log10(2)) == math.floor(math.log10(num)/math.log10(2))):
                         return True
-                    flag  = False
-                else:
-                    flag = False
-        return flag
+        return False
