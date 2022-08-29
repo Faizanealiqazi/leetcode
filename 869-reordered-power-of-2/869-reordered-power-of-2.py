@@ -10,15 +10,16 @@ class Solution:
             if (i%2==0 and i!=0):
                 count=1
                 break 
+            
         if count == 0:
             return False
         flag = True
         length = len(str(n))
         combinations = permutations(li,length)
-
+        
         for i in combinations:    
             num1 = ''
-            if i[len(i)-1] %2 == 0:
+            if i[len(i)-1] %2 == 0 and i[len(i)-1]!= 0:
                 for j in i:   
                   num1 += str(j)
                 num = int(num1) 
