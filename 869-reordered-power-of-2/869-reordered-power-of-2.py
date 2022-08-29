@@ -5,9 +5,10 @@ class Solution:
         if n == 0 or (math.ceil(math.log10(n)/math.log10(10)) == math.floor(math.log10(n)/math.log10(10))) or n >=1000000000:
             return False
         
-        num1 = [int(''.join(i)) for i in permutations(str(n))]
+        num1 = [''.join(i) for i in permutations(str(n))]
         
-        for num in num1:
+        for num11 in num1:
+            num = int(num11) 
             if num%2 == 0 and math.ceil(math.log10(num)/math.log10(2)) == math.floor(math.log10(num)/math.log10(2)):
                 return True
         return False
