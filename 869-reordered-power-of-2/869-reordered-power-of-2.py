@@ -5,7 +5,7 @@ class Solution:
         if n == 0 or (math.ceil(math.log10(n)/math.log10(10)) == math.floor(math.log10(n)/math.log10(10))):
             return False
         
-        num1 = [''.join(i) for i in permutations(str(n))]
+        num1 = [''.join(i) for i in itertools.permutations(str(n))]
         
         for num11 in num1:
             num = int(num11) 
