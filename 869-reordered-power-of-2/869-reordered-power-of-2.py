@@ -18,11 +18,11 @@ class Solution:
         combinations = permutations(li,length)
         
         for i in combinations:    
-            num1 = ''
+            num = ''
             if i[len(i)-1] %2 == 0 and i[len(i)-1]!= 0:
                 for j in i:   
-                  num1 += str(j)
-                num = int(num1) 
+                  num += str(j)
+                num = int(num) 
                 #print(num)
                 if (num%2) == 0:
                     if (math.ceil(math.log10(num)/math.log10(2)) == math.floor(math.log10(num)/math.log10(2))):
