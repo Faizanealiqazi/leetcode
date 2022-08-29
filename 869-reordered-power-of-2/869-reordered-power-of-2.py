@@ -2,9 +2,16 @@ class Solution:
     def reorderedPowerOf2(self, n: int) -> bool:
         if n == 1 or n == 2:
             return True
-        if n == 0 or (math.ceil(math.log10(n)/math.log10(10)) == math.floor(math.log10(n)/math.log10(10))) or n >=1000000000 or (math.ceil(math.log10(n)/math.log10(5)) == math.floor(math.log10(n)/math.log10(5))):
+        if n == 0 or (math.ceil(math.log10(n)/math.log10(10)) == math.floor(math.log10(n)/math.log10(10))) or n >=1000000000:
             return False
         li = [int(x) for x in str(n)]
+        count=0
+        for i in li:
+            if (i%2==0 and i!=0):
+                count=1
+                break 
+        if count == 0:
+            return False
         flag = True
         length = len(str(n))
         combinations = permutations(li,length)
