@@ -4,6 +4,8 @@ class Solution:
             return True
         if n == 0 or (math.ceil(math.log10(n)/math.log10(10)) == math.floor(math.log10(n)/math.log10(10))) or n >=1000000000:
             return False
+        
+        
         li = [int(x) for x in str(n)]
         for i in permutations(li):    
             num = ''
@@ -11,7 +13,6 @@ class Solution:
                 for j in i:   
                   num += str(j)
                 num = int(num) 
-                #print(num)
-                if (num%2) == 0 and math.ceil(math.log10(num)/math.log10(2)) == math.floor(math.log10(num)/math.log10(2)):
+                if num%2 == 0 and math.ceil(math.log10(num)/math.log10(2)) == math.floor(math.log10(num)/math.log10(2)):
                     return True
         return False
