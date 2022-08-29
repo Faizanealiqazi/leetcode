@@ -6,8 +6,8 @@ class Solution:
             return False
         
         
-        li = [int(x) for x in str(n)]
-        for i in permutations(li):    
+        #li = 
+        for i in permutations([int(x) for x in str(n)]):    
             num = ''
             if i[len(i)-1] %2 == 0 and i[len(i)-1]!= 0:
                 for j in i:   
