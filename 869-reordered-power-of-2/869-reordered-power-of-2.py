@@ -5,14 +5,6 @@ class Solution:
         if n == 0 or (math.ceil(math.log10(n)/math.log10(10)) == math.floor(math.log10(n)/math.log10(10))) or n >=1000000000:
             return False
         li = [int(x) for x in str(n)]
-        count=0
-        for i in li:
-            if (i%2==0 and i!=0):
-                count=1
-                break 
-            
-        if count == 0:
-            return False
         combinations = permutations(li)
         
         for i in combinations:    
