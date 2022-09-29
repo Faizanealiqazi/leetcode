@@ -27,11 +27,8 @@ public:
                  
                  if(i==count-n-1)
                  {
-                     ListNode * temp1 = temp->next;
-                     //cout<<temp->val;
                      temp->next = temp->next->next;
                      i++;
-                     //free(temp1) ;
                  }
                  else
                  {
