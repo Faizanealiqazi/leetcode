@@ -8,7 +8,7 @@ public:
         for(int i=0;i<length;i++)
         {
             count=0;
-            int arr[128]={};
+            int arr[128]={0};
             int j=i;
             while (j<length)
             {
