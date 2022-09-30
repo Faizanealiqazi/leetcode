@@ -2,33 +2,33 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) 
 {
-        int length  = s.length();
+        int l  = s.length();
         
-        int max=0,count=0;
-        for(int i=0;i<length;i++)
+        int m=0,c=0;
+        for(int i=0;i<l;i++)
         {
-            count=0;
-            int arr[128]={0};
+            c=0;
+            int a[128]={0};
             int j=i;
-            while (j<length)
+            while (j<l)
             {
-                if(arr[s[j]]==0)
+                if(a[s[j]]==0)
                 { 
-                    arr[s[j]]=1;
-                    count++;
+                    a[s[j]]=1;
+                    c++;
                 }
-                else if(arr[s[j]]==1)
+                else if(a[s[j]]==1)
                 {
                     break;
                 }
                 j++;
             }
-            if (count>max)
+            if (c>m)
             {
-                max = count;
+                m = c;
             }
         }
         
-        return max;
+        return m;
 }
 };
