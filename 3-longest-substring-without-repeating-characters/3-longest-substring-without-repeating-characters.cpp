@@ -27,6 +27,7 @@ public:
             {
                 m = c;
             }
+            if(m>l-i) break;
         }
         
         return m;
