@@ -3,16 +3,12 @@ public:
     int lengthOfLongestSubstring(string s) 
 {
         int length  = s.length();
-        int arr[256];
+        
         int max=0,count=0;
         for(int i=0;i<length;i++)
         {
             count=0;
-            memset(arr,0,256);
-            for (int j=0;j<256;j++)
-            {
-                arr[j]=0;
-            }
+            int arr[128]={};
             int j=i;
             while (j<length)
             {
