@@ -1,4 +1,3 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -51,7 +50,5 @@ int main() {
         num-=1;
     }
     DiamondShape(num,diamond,shape);
-    cout<<endl<<endl;
-
     return 0;
 }
