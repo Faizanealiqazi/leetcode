@@ -6,9 +6,8 @@ public:
         {
             sum += mat[i][i] + mat[i][n-i];
         }
-        if(n%2==0){
-            sum-=mat[h][h];
-        }
+        (n%2==0)? sum-=mat[h][h]:0;
+        
         return sum;
     }
 };
