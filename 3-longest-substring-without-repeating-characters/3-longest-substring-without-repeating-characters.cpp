@@ -8,6 +8,7 @@ public:
         for(int i=0;i<length;i++)
         {
             count=0;
+            memset(arr,0,256);
             for (int j=0;j<256;j++)
             {
                 arr[j]=0;
