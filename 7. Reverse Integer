@@ -1,0 +1,16 @@
+class Solution:
+    def reverse(self, n: int) -> int:
+        x = 0
+        ne =1
+        if n<0:
+            ne = -1
+            n = abs(n)
+
+        while n!=0:
+            x1 = (n % 10)
+            if x > 214748364 or (x == 214748364 and (x1 > 7 or (ne == -1 and x1<-8))):
+                return 0
+            x = x* 10 + x1
+            n = n // 10
+
+        return x*ne
