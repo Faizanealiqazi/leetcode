@@ -7,10 +7,8 @@ class Solution:
                 total = total * i
             else:
                 hasZero = hasZero + 1
-
-        print("total is ",total)
-
-        for i in range(len(list1)):
+        lenth = len(list1)
+        for i in range(lenth):
             if (hasZero > 1) or (list1[i] != 0 and hasZero == 1):
                 list1[i] = 0
             elif list1[i] == 0 and hasZero == 1:
